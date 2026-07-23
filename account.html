@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Account | Login &amp; Register | Vyshnavam</title>
+<meta name="description" content="Log in or create your Vyshnavam account to track orders, save your wishlist and manage your addresses.">
+<link rel="canonical" href="https://www.vyshnavam.in/account.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="My Account | Vyshnavam">
+<meta property="og:description" content="Log in or create your Vyshnavam account.">
+<link rel="icon" href="images/favi.jpeg" type="image/jpeg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="css/style.css">
+<style>
+  .auth-wrap{max-width:480px; margin:0 auto; background:#fff; border:1px solid var(--line); padding:clamp(2rem,4vw,3.2rem);}
+  .auth-tabs{display:flex; border-bottom:1px solid var(--line); margin-bottom:2rem;}
+  .auth-tabs button{
+    flex:1; background:none; border:none; cursor:pointer; padding:0 0 1rem; font-family:var(--font-body);
+    font-size:.78rem; letter-spacing:.1em; text-transform:uppercase; color:var(--ink-soft); position:relative;
+  }
+  .auth-tabs button::after{content:""; position:absolute; left:0; right:0; bottom:-1px; height:2px; background:transparent; transition:.3s;}
+  .auth-tabs button.active{color:var(--ink);}
+  .auth-tabs button.active::after{background:var(--gold-1);}
+  .auth-panel{display:none;}
+  .auth-panel.active{display:block;}
+  .auth-panel h2{font-size:1.5rem; margin:0 0 .4rem;}
+  .auth-panel .sub{font-size:.86rem; color:var(--ink-soft); margin:0 0 1.8rem; line-height:1.6;}
+  .form-field{margin-bottom:1.3rem;}
+  .form-field label{display:block; font-size:.72rem; letter-spacing:.14em; text-transform:uppercase; color:var(--gold-3); margin-bottom:.6rem;}
+  .form-field input{
+    width:100%; border:1px solid var(--line); background:#fff; padding:.85rem 1rem; font-family:var(--font-body); font-size:.92rem; outline:none; transition:.3s;
+  }
+  .form-field input:focus{border-color:var(--gold-1);}
+  .form-row-link{display:flex; justify-content:flex-end; margin:-.6rem 0 1.4rem;}
+  .form-row-link a{font-size:.78rem; color:var(--gold-3); cursor:pointer;}
+  .form-row-link a:hover{color:var(--gold-1);}
+  .auth-switch{text-align:center; margin-top:1.6rem; font-size:.85rem; color:var(--ink-soft);}
+  .auth-switch a{color:var(--gold-3); cursor:pointer; font-weight:500;}
+  .auth-switch a:hover{color:var(--gold-1);}
+  .auth-success{display:flex; gap:.9rem; align-items:flex-start; background:var(--ivory-2); border-left:3px solid var(--gold-1); padding:1.1rem 1.3rem; font-size:.86rem; color:var(--ink-soft); line-height:1.6; margin-top:1.4rem;}
+  .auth-success i{color:var(--gold-1); margin-top:.15rem;}
+</style>
+</head>
+<body>
+
+<header id="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="brand">
+      <img src="images/LOGO.png" alt="Vyshnavam logo">
+    </a>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="shop.html">Shop</a>
+      <a href="shop.html?category=New%20Arrivals">New Arrivals</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <a href="shop.html" class="icon-btn" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></a>
+      <a href="account.html" class="icon-btn account-link" aria-label="My Account"><i class="fa-solid fa-user"></i></a>
+      <span class="icon-btn" id="cart-toggle" aria-label="Open cart"><i class="fa-solid fa-bag-shopping"></i><span class="cart-count">0</span></span>
+      <div class="burger" id="burger"><span></span><span></span><span></span></div>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-nav" id="mobile-nav">
+  <div class="close-mobile" id="close-mobile"><i class="fa-solid fa-xmark fa-xl"></i></div>
+  <a href="index.html">Home</a>
+  <a href="about.html">About Us</a>
+  <a href="shop.html">Shop</a>
+  <a href="shop.html?category=New%20Arrivals">New Arrivals</a>
+  <a href="contact.html">Contact</a>
+  <a href="account.html" class="account-link">My Account</a>
+</div>
+
+<section class="page-hero">
+  <div class="container">
+    <span class="eyebrow">Your Vyshnavam World</span>
+    <h1>My Account</h1>
+    <p class="breadcrumb"><a href="index.html">Home</a> / My Account</p>
+  </div>
+</section>
+
+<section class="section-pad">
+  <div class="container">
+    <div class="auth-wrap reveal in">
+      <div class="auth-tabs">
+        <button class="active" data-tab="login">Login</button>
+        <button data-tab="register">Register</button>
+        <button data-tab="forgot">Forgot Password</button>
+      </div>
+
+      <!-- LOGIN -->
+      <div class="auth-panel active" id="panel-login">
+        <h2>Welcome Back</h2>
+        <p class="sub">Log in to view your orders, wishlist and saved addresses.</p>
+        <form id="login-form">
+          <div class="form-field"><label>Email or Phone</label><input type="text" required placeholder="you@email.com"></div>
+          <div class="form-field"><label>Password</label><input type="password" required placeholder="Enter your password"></div>
+          <div class="form-row-link"><a data-tab-link="forgot">Forgot Password?</a></div>
+          <button type="submit" class="btn btn-gold" style="width:100%;">Login</button>
+        </form>
+        <p class="auth-switch">New to Vyshnavam? <a data-tab-link="register">Create an account</a></p>
+      </div>
+
+      <!-- REGISTER -->
+      <div class="auth-panel" id="panel-register">
+        <h2>Create Your Account</h2>
+        <p class="sub">Join Vyshnavam to track orders and save your favourite pieces.</p>
+        <form id="register-form">
+          <div class="form-field"><label>Full Name</label><input type="text" required placeholder="Your name"></div>
+          <div class="form-field"><label>Email</label><input type="email" required placeholder="you@email.com"></div>
+          <div class="form-field"><label>Phone Number</label><input type="tel" required placeholder="+91 98XXX XXXXX"></div>
+          <div class="form-field"><label>Password</label><input type="password" required placeholder="Create a password"></div>
+          <div class="form-field"><label>Confirm Password</label><input type="password" required placeholder="Re-enter password"></div>
+          <button type="submit" class="btn btn-gold" style="width:100%;">Register</button>
+        </form>
+        <p class="auth-switch">Already have an account? <a data-tab-link="login">Login</a></p>
+      </div>
+
+      <!-- FORGOT PASSWORD -->
+      <div class="auth-panel" id="panel-forgot">
+        <h2>Reset Your Password</h2>
+        <p class="sub">Enter the email linked to your account and we'll send a reset link.</p>
+        <form id="forgot-form">
+          <div class="form-field"><label>Email</label><input type="email" required placeholder="you@email.com"></div>
+          <button type="submit" class="btn btn-gold" style="width:100%;">Send Reset Link</button>
+        </form>
+        <div class="auth-success" id="forgot-success" style="display:none;">
+          <i class="fa-solid fa-circle-check"></i>
+          <span>If an account exists for that email, a password reset link is on its way.</span>
+        </div>
+        <p class="auth-switch">Remembered your password? <a data-tab-link="login">Back to Login</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="images/LOGO.png" alt="Vyshnavam">
+        <p>A leading 18k gold plated jewelry brand — 100% anti-tarnish &amp; skin-safe jewels, the best gift for every occasion.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+          <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="account.html">My Account</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Collections</h4>
+        <ul>
+          <li><a href="shop.html?category=Necklaces">Necklaces</a></li>
+          <li><a href="shop.html?category=Earrings">Earrings</a></li>
+          <li><a href="shop.html?category=Bracelets">Bracelets</a></li>
+          <li><a href="shop.html?category=Rings">Rings</a></li>
+        </ul>
+      </div>
+      <div class="footer-col footer-contact">
+        <h4>Get In Touch</h4>
+        <ul>
+          <li><i class="fa-solid fa-location-dot"></i><span>Vyshnavam<br>Kerala</span></li>
+          <li><i class="fa-solid fa-phone"></i><span>+91 98XXX XXXXX</span></li>
+          <li><i class="fa-solid fa-envelope"></i><span>hello@vyshnavam.in</span></li>
+          <li><i class="fa-solid fa-clock"></i><span>Mon – Sat, 10am – 7pm IST</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Vyshnavam. All rights reserved.</span>
+      <span><a href="#">Privacy Policy</a> · <a href="#">Terms of Service</a> · <a href="#">Shipping &amp; Returns</a></span>
+      <span class="footer-credit">Designed and Developed by <a href="http://lestora.com/" target="_blank" rel="noopener">Lestora</a></span>
+    </div>
+  </div>
+</footer>
+
+<div class="overlay-scrim" id="overlay-scrim"></div>
+<div class="cart-drawer" id="cart-drawer">
+  <div class="cart-drawer-head">
+    <h3>My Selection</h3>
+    <i class="fa-solid fa-xmark fa-lg" id="close-cart" style="cursor:pointer;"></i>
+  </div>
+  <div class="cart-items" id="cart-drawer-items"></div>
+  <div class="cart-drawer-foot">
+    <p>We don't display prices online — add the pieces you love and send your selection to our team on WhatsApp for a personalised quote.</p>
+    <a href="#" id="whatsapp-enquiry" class="btn btn-gold" style="width:100%;"><i class="fa-brands fa-whatsapp"></i>&nbsp; Send Enquiry on WhatsApp</a>
+    <a href="cart.html" class="btn btn-dark" style="width:100%; margin-top:.8rem;">View Full Selection</a>
+  </div>
+</div>
+
+<!-- ============ WHATSAPP FLOAT ============ -->
+<div class="wa-panel" id="wa-panel">
+  <div class="wa-panel-head">
+    <i class="fa-brands fa-whatsapp"></i>
+    <div>
+      <h5>Chat with Vyshnavam</h5>
+      <span>Typically replies within a day</span>
+    </div>
+    <span class="wa-close" id="wa-panel-close"><i class="fa-solid fa-xmark"></i></span>
+  </div>
+  <div class="wa-panel-body">
+    <p>Have a question about a piece or your order? Message us on WhatsApp.</p>
+    <button class="wa-chat-btn" id="wa-chat-btn"><i class="fa-brands fa-whatsapp"></i> Start Chat</button>
+    <div class="wa-fallback"><i class="fa-solid fa-phone"></i><span>+91 XXX XXX XXXX</span></div>
+  </div>
+</div>
+<button class="wa-float" id="wa-float-btn" aria-label="Chat on WhatsApp"><i class="fa-brands fa-whatsapp"></i></button>
+
+<div class="toast" id="toast"></div>
+<div class="back-top" id="back-top"><i class="fa-solid fa-arrow-up"></i></div>
+
+<script src="js/products.js"></script>
+<script src="js/script.js"></script>
+<script>
+  // Redirect straight to the dashboard if already logged in
+  if (typeof isLoggedIn === "function" && isLoggedIn()) {
+    window.location.href = "dashboard.html";
+  }
+
+  function showAuthTab(name){
+    document.querySelectorAll(".auth-tabs button").forEach(b => b.classList.toggle("active", b.dataset.tab === name));
+    document.querySelectorAll(".auth-panel").forEach(p => p.classList.toggle("active", p.id === "panel-" + name));
+  }
+  document.querySelectorAll(".auth-tabs button").forEach(btn => {
+    btn.addEventListener("click", () => showAuthTab(btn.dataset.tab));
+  });
+  document.querySelectorAll("[data-tab-link]").forEach(link => {
+    link.addEventListener("click", (e) => { e.preventDefault(); showAuthTab(link.dataset.tabLink); });
+  });
+
+  document.getElementById("login-form").addEventListener("submit", (e) => {
+    e.preventDefault();
+    const email = e.target.querySelector('input[type="text"]').value || "you@email.com";
+    loginAccount({ name: email.split("@")[0] || "Guest", email });
+    window.location.href = "dashboard.html";
+  });
+
+  document.getElementById("register-form").addEventListener("submit", (e) => {
+    e.preventDefault();
+    const inputs = e.target.querySelectorAll("input");
+    const name = inputs[0].value, email = inputs[1].value, phone = inputs[2].value;
+    loginAccount({ name, email, phone });
+    window.location.href = "dashboard.html";
+  });
+
+  document.getElementById("forgot-form").addEventListener("submit", (e) => {
+    e.preventDefault();
+    document.getElementById("forgot-success").style.display = "flex";
+    e.target.reset();
+  });
+</script>
+</body>
+</html>

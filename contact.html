@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us | Vyshnavam</title>
+<meta name="description" content="Get in touch with Vyshnavam for styling advice, bridal appointments or order enquiries — by phone, WhatsApp, email or our Thiruvananthapuram studio.">
+<link rel="canonical" href="https://www.vyshnavam.in/contact.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Contact Vyshnavam">
+<meta property="og:description" content="Reach our team for styling advice, bridal appointments or order enquiries.">
+<link rel="icon" href="images/favi.jpeg" type="image/jpeg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="css/style.css">
+<style>
+  .contact-layout{display:grid; grid-template-columns:1fr 1fr; gap:4rem; align-items:start;}
+  .form-field{margin-bottom:1.4rem;}
+  .form-field label{display:block; font-size:.72rem; letter-spacing:.14em; text-transform:uppercase; color:var(--gold-3); margin-bottom:.6rem;}
+  .form-field input, .form-field select, .form-field textarea{
+    width:100%; border:1px solid var(--line); background:#fff; padding:.85rem 1rem; font-family:var(--font-body); font-size:.92rem; outline:none; transition:.3s;
+  }
+  .form-field input:focus, .form-field select:focus, .form-field textarea:focus{border-color:var(--gold-1);}
+  .contact-info-card{background:var(--green-deep); color:var(--ivory); padding:2.6rem; margin-bottom:1.6rem;}
+  .contact-info-card .eyebrow{color:var(--gold-2);}
+  .contact-info-card .eyebrow::before{background:var(--gold-2);}
+  .contact-info-card ul{list-style:none; padding:0; margin:1.4rem 0 0; display:flex; flex-direction:column; gap:1rem;}
+  .contact-info-card li{display:flex; gap:.9rem; align-items:flex-start; font-size:.92rem; color:rgba(250,246,238,.85);}
+  .contact-info-card i{color:var(--gold-2); margin-top:.2rem;}
+  .map-box{height:280px; background:var(--ivory-2) url('https://images.pexels.com/photos/29043373/pexels-photo-29043373.jpeg?auto=compress&cs=tinysrgb&w=900') center/cover; position:relative;}
+  .map-box::after{content:"Vyshnavam, Kerala"; position:absolute; bottom:1rem; left:1rem; background:var(--ivory); padding:.6rem 1rem; font-size:.78rem; color:var(--ink);}
+  @media(max-width:900px){ .contact-layout{grid-template-columns:1fr;} }
+</style>
+</head>
+<body>
+
+<header id="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="brand">
+      <img src="images/LOGO.png" alt="Vyshnavam logo">
+    </a>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="shop.html">Shop</a>
+      <a href="shop.html?category=New%20Arrivals">New Arrivals</a>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <a href="shop.html" class="icon-btn" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></a>
+      <a href="account.html" class="icon-btn account-link" aria-label="My Account"><i class="fa-solid fa-user"></i></a>
+      <span class="icon-btn" id="cart-toggle" aria-label="Open cart"><i class="fa-solid fa-bag-shopping"></i><span class="cart-count">0</span></span>
+      <div class="burger" id="burger"><span></span><span></span><span></span></div>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-nav" id="mobile-nav">
+  <div class="close-mobile" id="close-mobile"><i class="fa-solid fa-xmark fa-xl"></i></div>
+  <a href="index.html">Home</a>
+  <a href="about.html">About Us</a>
+  <a href="shop.html">Shop</a>
+  <a href="shop.html?category=New%20Arrivals">New Arrivals</a>
+  <a href="contact.html">Contact</a>
+  <a href="account.html" class="account-link">My Account</a>
+</div>
+
+<section class="page-hero">
+  <div class="container">
+    <span class="eyebrow">We'd love to hear from you</span>
+    <h1>Contact Vyshnavam</h1>
+    <p class="breadcrumb"><a href="index.html">Home</a> / Contact</p>
+  </div>
+</section>
+
+<section class="section-pad">
+  <div class="container contact-layout">
+    <div class="reveal">
+      <span class="eyebrow">Send An Enquiry</span>
+      <h2 style="font-size:2rem; margin:.8rem 0 1.8rem;">Tell Us What You're Looking For</h2>
+      <form id="contact-form">
+        <div class="form-field"><label>Full Name</label><input type="text" required placeholder="Your name"></div>
+        <div class="form-field"><label>Phone Number</label><input type="tel" required placeholder="+91 98XXX XXXXX"></div>
+        <div class="form-field"><label>Email</label><input type="email" required placeholder="you@email.com"></div>
+        <div class="form-field">
+          <label>I'm Enquiring About</label>
+          <select>
+            <option>General Enquiry</option>
+            <option>Bridal Styling Appointment</option>
+            <option>Order Status</option>
+            <option>Custom Piece Request</option>
+            <option>Exchange / Return</option>
+          </select>
+        </div>
+        <div class="form-field"><label>Message</label><textarea rows="5" placeholder="Tell us a little about what you need..."></textarea></div>
+        <button type="submit" class="btn btn-gold">Send Message</button>
+      </form>
+    </div>
+
+    <div class="reveal">
+      <div class="contact-info-card">
+        <span class="eyebrow">Studio &amp; Support</span>
+        <ul>
+          <li><i class="fa-solid fa-location-dot"></i><span>Vyshnavam, Kerala</span></li>
+          <li><i class="fa-solid fa-phone"></i><span>+91 98XXX XXXXX</span></li>
+          <li><i class="fa-brands fa-whatsapp"></i><span>+91 98XXX XXXXX (WhatsApp orders)</span></li>
+          <li><i class="fa-solid fa-envelope"></i><span>hello@vyshnavam.in</span></li>
+          <li><i class="fa-solid fa-clock"></i><span>Monday – Saturday, 10:00am – 7:00pm IST</span></li>
+        </ul>
+        <div class="footer-social" style="margin-top:1.8rem;">
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+        </div>
+      </div>
+      <div class="map-box"></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="images/LOGO.png" alt="Vyshnavam">
+        <p>A leading 18k gold plated jewelry brand — 100% anti-tarnish &amp; skin-safe jewels, the best gift for every occasion.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+          <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="account.html">My Account</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Collections</h4>
+        <ul>
+          <li><a href="shop.html?category=Necklaces">Necklaces</a></li>
+          <li><a href="shop.html?category=Earrings">Earrings</a></li>
+          <li><a href="shop.html?category=Bracelets">Bracelets</a></li>
+          <li><a href="shop.html?category=Rings">Rings</a></li>
+        </ul>
+      </div>
+      <div class="footer-col footer-contact">
+        <h4>Get In Touch</h4>
+        <ul>
+          <li><i class="fa-solid fa-location-dot"></i><span>Vyshnavam<br>Kerala</span></li>
+          <li><i class="fa-solid fa-phone"></i><span>+91 98XXX XXXXX</span></li>
+          <li><i class="fa-solid fa-envelope"></i><span>hello@vyshnavam.in</span></li>
+          <li><i class="fa-solid fa-clock"></i><span>Mon – Sat, 10am – 7pm IST</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Vyshnavam. All rights reserved.</span>
+      <span><a href="#">Privacy Policy</a> · <a href="#">Terms of Service</a> · <a href="#">Shipping &amp; Returns</a></span>
+      <span class="footer-credit">Designed and Developed by <a href="http://lestora.com/" target="_blank" rel="noopener">Lestora</a></span>
+    </div>
+  </div>
+</footer>
+
+<div class="overlay-scrim" id="overlay-scrim"></div>
+<div class="cart-drawer" id="cart-drawer">
+  <div class="cart-drawer-head">
+    <h3>My Selection</h3>
+    <i class="fa-solid fa-xmark fa-lg" id="close-cart" style="cursor:pointer;"></i>
+  </div>
+  <div class="cart-items" id="cart-drawer-items"></div>
+  <div class="cart-drawer-foot">
+    <p>We don't display prices online — add the pieces you love and send your selection to our team on WhatsApp for a personalised quote.</p>
+    <a href="#" id="whatsapp-enquiry" class="btn btn-gold" style="width:100%;"><i class="fa-brands fa-whatsapp"></i>&nbsp; Send Enquiry on WhatsApp</a>
+    <a href="cart.html" class="btn btn-dark" style="width:100%; margin-top:.8rem;">View Full Selection</a>
+  </div>
+</div>
+
+<!-- ============ WHATSAPP FLOAT ============ -->
+<div class="wa-panel" id="wa-panel">
+  <div class="wa-panel-head">
+    <i class="fa-brands fa-whatsapp"></i>
+    <div>
+      <h5>Chat with Vyshnavam</h5>
+      <span>Typically replies within a day</span>
+    </div>
+    <span class="wa-close" id="wa-panel-close"><i class="fa-solid fa-xmark"></i></span>
+  </div>
+  <div class="wa-panel-body">
+    <p>Have a question about a piece or your order? Message us on WhatsApp.</p>
+    <button class="wa-chat-btn" id="wa-chat-btn"><i class="fa-brands fa-whatsapp"></i> Start Chat</button>
+    <div class="wa-fallback"><i class="fa-solid fa-phone"></i><span>+91 XXX XXX XXXX</span></div>
+  </div>
+</div>
+<button class="wa-float" id="wa-float-btn" aria-label="Chat on WhatsApp"><i class="fa-brands fa-whatsapp"></i></button>
+
+<div class="toast" id="toast"></div>
+<div class="back-top" id="back-top"><i class="fa-solid fa-arrow-up"></i></div>
+
+<script src="js/products.js"></script>
+<script src="js/script.js"></script>
+<script>
+  document.getElementById("contact-form").addEventListener("submit", (e) => {
+    e.preventDefault();
+    showToast("Thank you — our team will reach out shortly.");
+    e.target.reset();
+  });
+</script>
+</body>
+</html>

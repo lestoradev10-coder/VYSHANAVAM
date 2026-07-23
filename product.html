@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title id="page-title">Product | Vyshnavam</title>
+<meta name="description" id="page-desc" content="Handcrafted gold-plated jewelry by Vyshnavam.">
+<link rel="canonical" href="https://www.vyshnavam.in/product.html">
+<link rel="icon" href="images/favi.jpeg" type="image/jpeg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="css/style.css">
+<script id="product-schema" type="application/ld+json"></script>
+</head>
+<body>
+
+<header id="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="brand">
+      <img src="images/LOGO.png" alt="Vyshnavam logo">
+    </a>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="shop.html" class="active">Shop</a>
+      <a href="shop.html?category=New%20Arrivals">New Arrivals</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <a href="shop.html" class="icon-btn" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></a>
+      <a href="account.html" class="icon-btn account-link" aria-label="My Account"><i class="fa-solid fa-user"></i></a>
+      <span class="icon-btn" id="cart-toggle" aria-label="Open cart"><i class="fa-solid fa-bag-shopping"></i><span class="cart-count">0</span></span>
+      <div class="burger" id="burger"><span></span><span></span><span></span></div>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-nav" id="mobile-nav">
+  <div class="close-mobile" id="close-mobile"><i class="fa-solid fa-xmark fa-xl"></i></div>
+  <a href="index.html">Home</a>
+  <a href="about.html">About Us</a>
+  <a href="shop.html">Shop</a>
+  <a href="shop.html?category=New%20Arrivals">New Arrivals</a>
+  <a href="contact.html">Contact</a>
+  <a href="account.html" class="account-link">My Account</a>
+</div>
+
+<section class="section-pad" style="padding-top:8.5rem;">
+  <div class="container">
+    <p class="breadcrumb" style="color:var(--ink-soft); margin-bottom:2.5rem;">
+      <a href="index.html" style="color:var(--gold-3);">Home</a> / <a href="shop.html" style="color:var(--gold-3);">Shop</a> / <span id="crumb-name"></span>
+    </p>
+    <div class="pd-layout">
+      <div>
+        <div class="pd-gallery-main"><img id="pd-main-img" src="" alt=""></div>
+        <div class="pd-thumbs" id="pd-thumbs"></div>
+      </div>
+      <div class="pd-info">
+        <span class="eyebrow" id="pd-cat"></span>
+        <h1 id="pd-name"></h1>
+        <p class="pd-desc" id="pd-desc"></p>
+
+        <div style="display:flex; align-items:center; gap:1.4rem; margin-bottom:1.6rem;">
+          <div class="qty-selector">
+            <button id="qty-minus">–</button>
+            <span id="qty-val">1</span>
+            <button id="qty-plus">+</button>
+          </div>
+          <span style="font-size:.78rem; color:var(--ink-soft);">Price on enquiry</span>
+        </div>
+
+        <div class="pd-actions">
+          <button class="btn btn-gold" id="pd-add"><i class="fa-solid fa-bag-shopping"></i>&nbsp; Add to cart</button>
+          <a href="#" class="btn btn-dark" id="pd-whatsapp"><i class="fa-brands fa-whatsapp"></i>&nbsp; Enquire Now</a>
+        </div>
+
+        <div class="pd-trust">
+          <div><i class="fa-solid fa-shield-halved"></i> Anti-tarnish guarantee</div>
+          <div><i class="fa-solid fa-truck-fast"></i> Insured shipping</div>
+          <div><i class="fa-solid fa-arrows-rotate"></i> 7-day easy exchange</div>
+        </div>
+
+        <ul class="pd-specs" id="pd-specs"></ul>
+
+        <div id="pd-accordion">
+          <div class="accordion-item open">
+            <div class="accordion-head"><span>Shipping &amp; Care</span><i class="fa-solid fa-plus accordion-icon"></i></div>
+            <div class="accordion-body">
+              <p>Dispatched within 2–3 working days in fully insured, tamper-proof packaging. Every order ships with a signature Vyshnavam pouch and care card.</p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <div class="accordion-head"><span>Exchange Policy</span><i class="fa-solid fa-plus accordion-icon"></i></div>
+            <div class="accordion-body">
+              <p>Unworn pieces in original packaging can be exchanged within 7 days of delivery. Bridal sets are eligible for a one-time size adjustment.</p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <div class="accordion-head"><span>A Note On Plating</span><i class="fa-solid fa-plus accordion-icon"></i></div>
+            <div class="accordion-body">
+              <p>All Vyshnavam pieces carry a 18kt gold micron plating over an anti-tarnish brass base. With the care guide followed, colour typically holds for 12–18 months of regular wear.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-pad" style="background:var(--ivory-2);">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Complete the look</span>
+      <h2>You May Also Like</h2>
+    </div>
+    <div class="carousel-wrap reveal" data-carousel>
+      <div class="carousel-nav">
+        <button data-prev aria-label="Previous"><i class="fa-solid fa-arrow-left"></i></button>
+        <button data-next aria-label="Next"><i class="fa-solid fa-arrow-right"></i></button>
+      </div>
+      <div class="carousel-row" id="related-row"></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="images/LOGO.png" alt="Vyshnavam">
+        <p>A leading 18k gold plated jewelry brand — 100% anti-tarnish &amp; skin-safe jewels, the best gift for every occasion.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+          <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="account.html">My Account</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Collections</h4>
+        <ul>
+          <li><a href="shop.html?category=Necklaces">Necklaces</a></li>
+          <li><a href="shop.html?category=Earrings">Earrings</a></li>
+          <li><a href="shop.html?category=Bracelets">Bracelets</a></li>
+          <li><a href="shop.html?category=Rings">Rings</a></li>
+        </ul>
+      </div>
+      <div class="footer-col footer-contact">
+        <h4>Get In Touch</h4>
+        <ul>
+          <li><i class="fa-solid fa-location-dot"></i><span>Vyshnavam<br>Kerala</span></li>
+          <li><i class="fa-solid fa-phone"></i><span>+91 98XXX XXXXX</span></li>
+          <li><i class="fa-solid fa-envelope"></i><span>hello@vyshnavam.in</span></li>
+          <li><i class="fa-solid fa-clock"></i><span>Mon – Sat, 10am – 7pm IST</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Vyshnavam. All rights reserved.</span>
+      <span><a href="#">Privacy Policy</a> · <a href="#">Terms of Service</a> · <a href="#">Shipping &amp; Returns</a></span>
+      <span class="footer-credit">Designed and Developed by <a href="http://lestora.com/" target="_blank" rel="noopener">Lestora</a></span>
+    </div>
+  </div>
+</footer>
+
+<div class="overlay-scrim" id="overlay-scrim"></div>
+<div class="cart-drawer" id="cart-drawer">
+  <div class="cart-drawer-head">
+    <h3>My Selection</h3>
+    <i class="fa-solid fa-xmark fa-lg" id="close-cart" style="cursor:pointer;"></i>
+  </div>
+  <div class="cart-items" id="cart-drawer-items"></div>
+  <div class="cart-drawer-foot">
+    <p>We don't display prices online — add the pieces you love and send your selection to our team on WhatsApp for a personalised quote.</p>
+    <a href="#" id="whatsapp-enquiry" class="btn btn-gold" style="width:100%;"><i class="fa-brands fa-whatsapp"></i>&nbsp; Send Enquiry on WhatsApp</a>
+    <a href="cart.html" class="btn btn-dark" style="width:100%; margin-top:.8rem;">View Full Selection</a>
+  </div>
+</div>
+
+<!-- ============ WHATSAPP FLOAT ============ -->
+<div class="wa-panel" id="wa-panel">
+  <div class="wa-panel-head">
+    <i class="fa-brands fa-whatsapp"></i>
+    <div>
+      <h5>Chat with Vyshnavam</h5>
+      <span>Typically replies within a day</span>
+    </div>
+    <span class="wa-close" id="wa-panel-close"><i class="fa-solid fa-xmark"></i></span>
+  </div>
+  <div class="wa-panel-body">
+    <p>Have a question about a piece or your order? Message us on WhatsApp.</p>
+    <button class="wa-chat-btn" id="wa-chat-btn"><i class="fa-brands fa-whatsapp"></i> Start Chat</button>
+    <div class="wa-fallback"><i class="fa-solid fa-phone"></i><span>+91 XXX XXX XXXX</span></div>
+  </div>
+</div>
+<button class="wa-float" id="wa-float-btn" aria-label="Chat on WhatsApp"><i class="fa-brands fa-whatsapp"></i></button>
+
+<div class="toast" id="toast"></div>
+<div class="back-top" id="back-top"><i class="fa-solid fa-arrow-up"></i></div>
+
+<script src="js/products.js"></script>
+<script src="js/script.js"></script>
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const product = getProduct(params.get("id")) || PRODUCTS[0];
+  let qty = 1;
+
+  document.getElementById("page-title").textContent = `${product.name} | Vyshnavam`;
+  document.getElementById("page-desc").setAttribute("content", product.short);
+  document.getElementById("crumb-name").textContent = product.name;
+  document.getElementById("pd-cat").textContent = product.category;
+  document.getElementById("pd-name").textContent = product.name;
+  document.getElementById("pd-desc").textContent = product.description;
+  document.getElementById("pd-main-img").src = product.image;
+  document.getElementById("pd-main-img").alt = product.name;
+
+  document.getElementById("pd-thumbs").innerHTML = product.gallery.map((src,i) => `
+    <img src="${src}" class="${i===0 ? 'active' : ''}" onclick="setMain(this,'${src}')" alt="${product.name} view ${i+1}">
+  `).join("");
+  function setMain(el, src){
+    document.getElementById("pd-main-img").src = src;
+    document.querySelectorAll(".pd-thumbs img").forEach(t => t.classList.remove("active"));
+    el.classList.add("active");
+  }
+
+  document.getElementById("pd-specs").innerHTML = Object.entries(product.specs).map(([k,v]) => `
+    <li><span>${k}</span><span style="text-align:right; color:var(--ink);">${v}</span></li>
+  `).join("");
+
+  document.getElementById("qty-plus").addEventListener("click", () => { qty++; document.getElementById("qty-val").textContent = qty; });
+  document.getElementById("qty-minus").addEventListener("click", () => { qty = Math.max(1,qty-1); document.getElementById("qty-val").textContent = qty; });
+  document.getElementById("pd-add").addEventListener("click", () => addToCart(product.id, qty));
+  document.getElementById("pd-whatsapp").addEventListener("click", (e) => {
+    e.preventDefault();
+    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=Hello Vyshnavam, I'd like to enquire about the ${encodeURIComponent(product.name)}.`, "_blank");
+  });
+
+  // Related products
+  const related = PRODUCTS.filter(p => p.category === product.category && p.id !== product.id).slice(0,8);
+  const fallbackRelated = related.length ? related : PRODUCTS.filter(p => p.id !== product.id).slice(0,8);
+  document.getElementById("related-row").innerHTML = fallbackRelated.map(p => `
+    <div class="product-card reveal in">
+      <a href="product.html?id=${p.id}" class="pc-media">
+        <img src="${p.image}" alt="${p.name}">
+        ${p.tag ? `<span class="pc-tag">${p.tag}</span>` : ""}
+      </a>
+      <button class="pc-quick" onclick="addToCart('${p.id}')" aria-label="Add to cart"><i class="fa-solid fa-bag-shopping"></i></button>
+      <div class="pc-body">
+        <span class="pc-cat">${p.category}</span>
+        <h3 class="pc-name"><a href="product.html?id=${p.id}">${p.name}</a></h3>
+        <div class="pc-actions">
+          <button class="pc-add" onclick="addToCart('${p.id}')">Add to cart</button>
+        </div>
+      </div>
+    </div>
+  `).join("");
+
+  // Product schema
+  document.getElementById("product-schema").textContent = JSON.stringify({
+    "@context":"https://schema.org",
+    "@type":"Product",
+    "name":product.name,
+    "description":product.description,
+    "image":product.gallery,
+    "brand":{"@type":"Brand","name":"Vyshnavam"},
+    "category":product.category
+  });
+</script>
+</body>
+</html>
